@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MiprimeraApp</string>
+
+    <string name="Titulo">Hola Mundo Strings</string>
+    <string name="subtitulo">Bienvenido al app de Sarah Osorto</string>
+    <string name="hacer_click">Hacer Click</string>
+    <string name="redireccionar">Redireccionar</string>
+</resources>
