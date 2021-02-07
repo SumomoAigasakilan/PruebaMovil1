@@ -40,5 +40,6 @@ public class SegundaPantallaActivy extends AppCompatActivity {
         super.onDestroy();
         Log.i("Ciclo-SP", "onDestroy");
     }
+// Prueba Git Para guardar comentarios 
 
 }
