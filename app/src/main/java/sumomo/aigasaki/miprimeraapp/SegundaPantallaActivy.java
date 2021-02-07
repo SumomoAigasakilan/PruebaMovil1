@@ -42,4 +42,7 @@ public class SegundaPantallaActivy extends AppCompatActivity {
     }
 // Prueba Git Para guardar comentarios 
 
+//Prueba 2do Guardado
+
+
 }
