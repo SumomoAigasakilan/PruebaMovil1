@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         //declaramos una variable titulo que hara cambios en el objeto que tiene por ID txt titulo
         titulo = findViewById(R.id.txtTitulo);
         Button boton = findViewById(R.id.btnClick);
-        EditText ActualizarTitulo = findViewById(R.id.txtinputNombre);
+        EditText CajaTexto = findViewById(R.id.txtinputNombre);
 
 
         //Establecemos/Seteamos SET TEXT
@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
                 //le decimos que a la variable titulo Establesca el Texto del Objeto Actualizar Tome el Texto y lo haga un String
                 //la sentencia if es para validar que no acepte campo vacios
-                if (!ActualizarTitulo.getText().toString().isEmpty())
-                    titulo.setText(ActualizarTitulo.getText().toString());
+                if (!CajaTexto.getText().toString().isEmpty())
+                    titulo.setText(CajaTexto.getText().toString());
                 else
                     mostrarMensaje(v);
             }
@@ -55,17 +55,26 @@ public class MainActivity extends AppCompatActivity {
         irPantalla.setOnClickListener((view)->{
             //lanzar actividad
             Intent abrir= new Intent(this, SegundaPantallaActivy.class);
+
+             String valor=CajaTexto.getText().toString();
+        // ala intencion le estoy mandando el caracter a travez de un parametro con los textos del valor
+             abrir.putExtra("parametro1", valor);
+
+            abrir.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            abrir.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            abrir.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
             startActivity(abrir);
         });
 
     }
 
-//    @Override
-//    protected void onSaveInstanceState(@NonNull Bundle outState) {
-//        super.onSaveInstanceState(outState);
-//        Log.i("Ciclo","onSaveInstanceState");
-//        outState.putString("titulo",titulo.getText().toString());
-//    }
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i("Ciclo","onSaveInstanceState");
+        outState.putString("titulo",titulo.getText().toString());
+    }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {

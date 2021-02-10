@@ -4,14 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 public class SegundaPantallaActivy extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i("Ciclo-SP", "onCreate");
         setContentView(R.layout.activity_segunda_pantalla_activy);
+
+        TextView SPtitulo=findViewById(R.id.TxtSPTitulo);
+
+        //Extraemos a traves de la variable de valorRecibido , lo que viene del intet, los extras"cosas que envia" y luego decir que lo que envia es un String
+        String valorRecibido=getIntent().getExtras().getString("parametro1");
+
+        SPtitulo.setText(valorRecibido);
     }
 
     @Override
