@@ -43,8 +43,11 @@ public class MainActivity extends AppCompatActivity {
 
                 //le decimos que a la variable titulo Establesca el Texto del Objeto Actualizar Tome el Texto y lo haga un String
                 //la sentencia if es para validar que no acepte campo vacios
-                if (!CajaTexto.getText().toString().isEmpty())
+                if (!CajaTexto.getText().toString().isEmpty()){
                     titulo.setText(CajaTexto.getText().toString());
+                    CajaTexto.setText("");
+                }
+
                 else
                     mostrarMensaje(v);
             }

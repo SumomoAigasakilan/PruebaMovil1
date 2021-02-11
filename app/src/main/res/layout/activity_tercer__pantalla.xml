@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Tercer_Pantalla">
+
+    <TextView
+        android:id="@+id/txtTitulo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TITULO1"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="155dp"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtTitulo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TITULO2"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtTitulo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TITULO3"
+            android:textSize="25sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"/>
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_weight="1"
+               android:layout_gravity="center">
+
+               <TextView
+                   android:id="@+id/txtTitulo4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="TITULO4"
+
+                   android:textSize="25sp"
+                   android:layout_weight="2"/>
+               <TextView
+                   android:id="@+id/txtTitulo5"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="TITULO5"
+                   android:textSize="25sp"
+                   android:layout_weight="2"/>
+
+               <TextView
+                   android:id="@+id/txtTitulo6"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="TITULO6"
+                   android:textSize="25sp"
+                   android:layout_weight="1"/>
+
+           </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTitulo7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="TITULO7"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="155dp" />
+</LinearLayout>

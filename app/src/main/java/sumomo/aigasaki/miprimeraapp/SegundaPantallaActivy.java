@@ -2,8 +2,10 @@ package sumomo.aigasaki.miprimeraapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class SegundaPantallaActivy extends AppCompatActivity {
@@ -22,6 +24,13 @@ public class SegundaPantallaActivy extends AppCompatActivity {
         String valorRecibido=getIntent().getExtras().getString("parametro1");
 
         SPtitulo.setText(valorRecibido);
+
+        Button Abrir=findViewById(R.id.btnAbrir);
+
+        Abrir.setOnClickListener((view->{
+            Intent abrir= new Intent(this,Tercer_Pantalla.class);
+            startActivity(abrir);
+        }));
     }
 
     @Override
